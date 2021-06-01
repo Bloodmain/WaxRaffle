@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>{{ title }}</title>
+</head>
+<body>
+<nav>
+    <div class="header">
+        <div class="logo"><span class="logo-1">Wax</span><span class="logo-2">Raffle</span></div>
+        <div class="nav-elems">
+            <div class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                     class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                </svg>
+            </div>
+            <a class="nav-elem first selected" href="#"><span class="nav-text">Login Through WAX</span></a>
+            <div class="ln"></div>
+            <a class="nav-elem" href="#"><span class="nav-text">Purchase</span></a>
+            <div class="ln"></div>
+            <a class="nav-elem" href="#"><span class="nav-text">Try Your Luck</span></a>
+            <div class="ln"></div>
+            <a class="nav-elem" href="#"><span class="nav-text">Receive WAX</span></a>
+        </div>
+    </div>
+</nav>
+</body>
+<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</html>
