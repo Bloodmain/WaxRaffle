@@ -8,7 +8,7 @@ nav {
 }
 
 ::-webkit-scrollbar {
-    width:0;
+    width: 0;
 }
 
 
@@ -20,12 +20,40 @@ nav {
 
 .logo {
     cursor: pointer;
-    display: inline-block;
     font-size: 56px;
     font-weight: bold;
-    margin-left: 2rem;
-    margin-top: 1rem;
-    width: fit-content;
+    align-items: center;
+    margin-top: -33px;
+}
+
+@media screen and (min-width: 1000px) {
+    .logo {
+        float: left;
+        display: flex;
+    }
+
+    .nav-elems {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .logo {
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .nav-elems {
+        text-align: center;
+    }
+
+    .arrow {
+        display: none;
+    }
+}
+
+.first {
+    margin-left: 50px;
 }
 
 .logo-2 {
@@ -38,7 +66,6 @@ nav {
 
 .nav-elem {
     display: inline-block;
-    vertical-align: middle;
     font-size: 16px;
     color: white;
     border: 1px solid #e50280;
@@ -47,9 +74,15 @@ nav {
     transition: all 300ms;
 }
 
-.nav-elem:hover {
+.nav-elem:hover:not(.selected) {
     text-decoration: none;
-    border: 3px solid #e50280;
+    color: white;
+    background: #ff0296;
+    transition: all 300ms;
+}
+
+.selected:hover {
+    text-decoration: none;
     color: white;
     transition: all 300ms;
 }
@@ -59,16 +92,28 @@ nav {
     transition: all 50ms;
 }
 
+.selected {
+    background: linear-gradient(#e50280, black, #e50280);
+    animation: background 10s infinite alternate;
+}
+
+@keyframes background {
+  100% {
+    background-position: 0 200px;
+  }
+}
+
 .nav-text {
     padding: 5px;
 }
 
 .nav-elems {
     display: inline-block;
-    width: 70%;
+    width: 90%;
 }
 
 .arrow {
+    opacity: 0;
     color: white;
     text-align: left;
     offset: 0;
