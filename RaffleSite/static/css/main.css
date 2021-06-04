@@ -20,7 +20,7 @@ body {
 }
 
 .nav-elem, .login-btn {
-    margin-top: 20px;
+    margin-top: 50px;
     font-family: 'Work Sans', sans-serif;
     font-size: 20px;
     color: white;
@@ -46,7 +46,7 @@ body {
     transition: background 200ms, border 10ms;
 }
 
-.nav-elem:hover {
+.nav-elem:not(.selected):hover {
     text-decoration: none;
     color: white;
     border-bottom: 1px solid white;
@@ -68,14 +68,11 @@ body {
 }
 
 .selected {
-    background: linear-gradient(#e50280, black, #e50280);
-    animation: background 10s infinite alternate;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #E50280;
+    border-bottom: 1px solid;
 }
 
-@keyframes background {
-    100% {
-        background-position: 0 200px;
-    }
+.selected:hover {
+    color: #E50280;
+    text-decoration: none;
 }
