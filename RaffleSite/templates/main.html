@@ -14,28 +14,12 @@
     <title>{{ title }}</title>
 </head>
 <body>
-<nav>
-    <div class="header">
-        <div class="nav-elems">
-            <div class="arrow">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-                     class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                    <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
-                </svg>
-            </div>
-            <div class="logo"><span class="logo-1">Wax</span><span class="logo-2">Raffle</span></div>
-            <div class="wrap">
-                <a class="nav-elem first" href="#"><span
-                        class="nav-text">Login Through WAX</span></a>
-                <div class="ln"></div>
-                <a class="nav-elem" href="#"><span class="nav-text">Purchase</span></a>
-                <div class="ln"></div>
-                <a class="nav-elem" href="#"><span class="nav-text">Try Your Luck</span></a>
-                <div class="ln"></div>
-                <a class="nav-elem" href="#"><span class="nav-text">Receive WAX</span></a>
-            </div>
-        </div>
-    </div>
+<nav class="header">
+    <img src="{% static 'img/favicon.png'%}" alt="Лого" class="logo">
+    <a class="nav-elem" href="#">Purchase</a>
+    <a class="nav-elem" href="#">Try Your Luck</a>
+    <a class="nav-elem" href="#">Swap</a>
+    <a class="login-btn" href="#">Login</a>
 </nav>
 </body>
 <script type="text/javascript" src="{% static 'js/script.js' %}"></script>

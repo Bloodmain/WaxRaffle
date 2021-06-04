@@ -1,128 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+
 body {
-    background: black;
-    overscroll-behavior-x: none;
+    background: #494949;
 }
-
-nav {
-    text-align: center;
-}
-
-::-webkit-scrollbar {
-    width: 0;
-}
-
 
 .header {
-    margin-top: -100%;
-    font-family: 'Work Sans', sans-serif;
-    transition: all 1000ms;
+    background: #404040;
+    display: flex;
 }
 
 .logo {
-    cursor: pointer;
-    font-size: 56px;
-    font-weight: bold;
-    align-items: center;
-    margin-top: -33px;
-}
-
-@media screen and (min-width: 1000px) {
-    .logo {
-        float: left;
-        display: flex;
-    }
-
-    .nav-elems {
-        text-align: left;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .logo {
-        text-align: center;
-        margin-top: 0;
-    }
-
-    .nav-elems {
-        text-align: center;
-    }
-
-    .arrow {
-        display: none;
-    }
-}
-
-.first {
+    width: 80px;
+    height: 80px;
     margin-left: 50px;
 }
 
-.logo-2 {
-    color: #e50280;
+.nav-text {
+    vertical-align: middle;
 }
 
-.logo-1 {
+.nav-elem, .login-btn {
+    margin-top: 20px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
     color: white;
 }
 
 .nav-elem {
-    display: inline-block;
-    font-size: 16px;
+    margin-left: 75px;
+    text-decoration: none;
     color: white;
-    border: 1px solid #e50280;
+}
+
+.login-btn {
     border-radius: 10px;
-    width: fit-content;
-    transition: all 300ms;
+    background: #E50280;
+    border: 1px solid #E50280;
+    text-align: center;
+    width: 120px;
+    margin-right: 25px;
+    margin-left: auto;
+    order: 2;
+    margin-bottom: 20px;
+    height: fit-content;
+    transition: background 200ms, border 10ms;
 }
 
-.nav-elem:hover:not(.selected) {
+.nav-elem:hover {
     text-decoration: none;
     color: white;
-    background: #ff0296;
-    transition: all 300ms;
+    border-bottom: 1px solid white;
 }
 
-.selected:hover {
+.login-btn:hover {
     text-decoration: none;
     color: white;
-    transition: all 300ms;
+    background: #4a0227;
 }
 
 .nav-elem:active {
+    color: #E50280;
+    border-bottom: 1px solid;
+}
+
+.login-btn:active {
     border: 1px solid white;
-    transition: all 50ms;
 }
 
 .selected {
     background: linear-gradient(#e50280, black, #e50280);
     animation: background 10s infinite alternate;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 @keyframes background {
-  100% {
-    background-position: 0 200px;
-  }
-}
-
-.nav-text {
-    padding: 5px;
-}
-
-.nav-elems {
-    display: inline-block;
-    width: 90%;
-}
-
-.arrow {
-    opacity: 0;
-    color: white;
-    text-align: left;
-    offset: 0;
-    transition: 300ms all;
-}
-
-.ln {
-    display: inline-block;
-    height: 1px;
-    border: 1px solid #e50280;
-    background: #e50280;
+    100% {
+        background-position: 0 200px;
+    }
 }
