@@ -15,7 +15,7 @@ class UserAPI(APIView):
         data = request.data
         if request.user.is_authenticated:
             logout(request)
-        user = User.objects.get(username=data['username'])
+        user = User.objects.filter(username=data['username']).first()
         if user:
             login(request, user)
         else:
