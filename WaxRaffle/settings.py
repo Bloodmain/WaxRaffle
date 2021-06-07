@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'RaffleSite.apps.RafflesiteConfig'
+    'RaffleSite.apps.RafflesiteConfig',
+    'api.apps.ApiConfig'
 ]
 
 MIDDLEWARE = [

@@ -10,17 +10,14 @@ body {
 }
 
 .logo {
+    cursor: pointer;
     width: 80px;
     height: 80px;
     margin-left: 50px;
 }
 
-.nav-text {
-    vertical-align: middle;
-}
-
-.nav-elem, .login-btn {
-    margin-top: 50px;
+.nav-elem, .login-btn, .user-wrapper {
+    margin-top: 25px;
     font-family: 'Work Sans', sans-serif;
     font-size: 20px;
     color: white;
@@ -32,7 +29,7 @@ body {
     color: white;
 }
 
-.login-btn {
+.login-btn, .user-wrapper {
     border-radius: 10px;
     background: #E50280;
     border: 1px solid #E50280;
@@ -55,7 +52,7 @@ body {
 .login-btn:hover {
     text-decoration: none;
     color: white;
-    background: #4a0227;
+    background: #404040;
 }
 
 .nav-elem:active {
@@ -75,4 +72,36 @@ body {
 .selected:hover {
     color: #E50280;
     text-decoration: none;
+}
+
+.user-info {
+    height: fit-content;
+    width: fit-content;
+    background: #ffa365;
+    border: 1px solid #ffa365;
+    border-radius: 10px;
+    color: white;
+    transition: all 500ms;
+}
+
+.user-wrapper {
+    background: none;
+    width: fit-content;
+    border: none;
+    display: flex;
+}
+
+.user-info:hover {
+    text-decoration: none;
+    color: #E50280;
+}
+
+.logout-btn {
+    color: #E50280;
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+.logout-btn:hover {
+    margin-left: 10px;
 }
