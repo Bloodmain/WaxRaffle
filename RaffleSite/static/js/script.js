@@ -60,3 +60,8 @@ $('.logout-btn').click(function () {
         location.reload()
     })
 })
+
+$('.user-info').hover(function () {
+    $('.menu').width($('.user-info').width() - 10)
+    $('.menu').toggleClass('menu-active')
+})

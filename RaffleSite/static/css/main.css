@@ -11,9 +11,10 @@ body {
 
 .logo {
     cursor: pointer;
-    width: 80px;
-    height: 80px;
-    margin-left: 50px;
+    width: 90px;
+    height: 65px;
+    margin-left: 30px;
+    margin-top: 5px;
 }
 
 .nav-elem, .login-btn, .user-wrapper {
@@ -79,9 +80,9 @@ body {
     width: fit-content;
     background: #ffa365;
     border: 1px solid #ffa365;
-    border-radius: 10px;
+    border-radius: 15px;
     color: white;
-    transition: all 500ms;
+    transition: all 300ms;
 }
 
 .user-wrapper {
@@ -96,12 +97,39 @@ body {
     color: #E50280;
 }
 
-.logout-btn {
-    color: #E50280;
-    cursor: pointer;
-    transition: all 500ms;
+.username {
+    z-index: 2;
+    position: relative;
+    padding-left: 7px;
+    padding-right: 7px;
 }
 
-.logout-btn:hover {
-    margin-left: 10px;
+.menu-btn {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-btn:hover {
+    color: #E50280;
+    text-decoration: none;
+}
+
+.menu {
+    position: fixed;
+    overflow-y: hidden;
+    height: fit-content;
+    background: #ffa365;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all 400ms;
+    margin-left: -52px;
+    border-radius: 20px;
+    margin-top: -28px;
+    padding-bottom: 3px;
+}
+
+.menu-active {
+    transform: scaleY(1);
 }
