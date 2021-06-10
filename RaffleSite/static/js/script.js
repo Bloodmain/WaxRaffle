@@ -62,6 +62,14 @@ $('.logout-btn').click(function () {
 })
 
 $('.user-info').hover(function () {
-    $('.menu').width($('.user-info').width() - 10)
+    $('.username').toggleClass('menu-active')
     $('.menu').toggleClass('menu-active')
+    $('.user-info').toggleClass('menu-active')
+    $('.menu').offset({left: $(this).offset().left})
+    $('.menu').width($(this).outerWidth())
+})
+
+$(window).resize(function () {
+    $('.head-bg').height($('.header').height())
+    $('.menu').offset({left: $(this).offset().left})
 })
