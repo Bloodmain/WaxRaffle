@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
 
 body {
-    background: #494949;
+    background: #1d202b;
 }
 
 .head-bg {
     position: absolute;
     width: 100%;
     height: 78px;
-    background: #404040;
+    background: #1b1d28;
     z-index: -1;
 }
 
@@ -19,7 +19,7 @@ body {
 }
 
 .header {
-    background: #404040;
+    background: #1b1d28;
     display: flex;
 }
 
@@ -28,7 +28,7 @@ body {
     width: 90px;
     height: 65px;
     margin-left: 30px;
-    margin-top: 5px;
+    margin-top: 7px;
 }
 
 .nav-elem, .login-btn, .user-wrapper {
@@ -90,13 +90,13 @@ body {
 }
 
 .user-info {
+    cursor: pointer;
     height: fit-content;
     width: fit-content;
     background: #ffa365;
     border: 1px solid #ffa365;
     border-radius: 15px;
-    color: white;
-    transition: all 1000ms;
+    transition: all 610ms;
 }
 
 .user-wrapper {
@@ -106,19 +106,15 @@ body {
     display: flex;
 }
 
-.user-info:hover {
-    text-decoration: none;
-    color: white;
-}
-
 .username {
+    color: white;
     z-index: 2;
     position: relative;
     padding-left: 7px;
     padding-right: 7px;
     background: #ffa365;
     border-radius: 15px;
-    transition: all 300ms;
+    transition: border-radius 300ms;
 }
 
 .menu-btn {
@@ -149,7 +145,7 @@ body {
     background: #ffa365;
     transform: scaleY(0);
     transform-origin: top;
-    transition: all 300ms;
+    transition: transform 300ms;
     margin-top: -15px;
     padding-bottom: 3px;
     border-radius: 0 0 15px 15px;
@@ -166,4 +162,8 @@ body {
 
 .user-info.menu-active {
     border-radius: 15px 15px 0 0;
+}
+
+.username:hover {
+    border-bottom: 1px solid #f49756;
 }

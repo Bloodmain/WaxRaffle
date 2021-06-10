@@ -71,5 +71,5 @@ $('.user-info').hover(function () {
 
 $(window).resize(function () {
     $('.head-bg').height($('.header').height())
-    $('.menu').offset({left: $(this).offset().left})
+    $('.menu').offset({left: $('.user-info').offset().left})
 })
