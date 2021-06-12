@@ -71,5 +71,27 @@ $('.user-info').hover(function () {
 
 $(window).resize(function () {
     $('.head-bg').height($('.header').height())
+    $('.foot-bg').height($('footer').height())
     $('.menu').offset({left: $('.user-info').offset().left})
+    $('footer').offset({top: Math.max($(window).height() - $('footer').outerHeight() - 2, $('.wrapper').offset().top + $('.wrapper').outerHeight())})
+    $('.foot-bg').offset({top: $('footer').offset().top})
+})
+
+function onLoad() {
+    $('.head-bg').height($('.header').height())
+    $('.foot-bg').height($('footer').height())
+    $('footer').offset({top: Math.max($(window).height() - $('footer').outerHeight() - 2, $('.wrapper').offset().top + $('.wrapper').outerHeight())})
+    $('.foot-bg').offset({top: $('footer').offset().top})
+}
+
+$(onLoad)
+
+$('.logo').click(function () {
+    location.assign('/')
+})
+
+$(document).ready(function () {
+    setInterval(function () {
+
+    }, 1000)
 })

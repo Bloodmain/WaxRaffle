@@ -1,0 +1,42 @@
+{% extends "main.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/purchase.css' %}">
+
+<h1>Wax Raffle Shop</h1>
+<div class="packs">
+    <div class="pack test-pack">
+        <img src="{% static 'img/shop-bg-gradient.png' %}" alt="...">
+        <img src="{% static 'img/test-pack.png' %}" alt="..." class="pack-img">
+        <textarea class="pack-description" disabled>Pack: Test Pack
+Series: Series 1</textarea>
+        <a class="purchase-btn" href="#"><span class="purchase-text">Purchase (0d&nbsp12h&nbsp23m&nbsp54s)</span></a>
+    </div>
+    <div class="pack bronze-pack">
+        <img src="{% static 'img/shop-bg-bronze.png' %}" alt="...">
+        <img src="{% static 'img/bronze-mini-pack.png' %}" alt="..." class="pack-img mini-pack">
+        <img src="{% static 'img/bronze-mega-pack.png' %}" alt="..." class="pack-img mega-pack">
+        <textarea class="pack-description" disabled>Pack: Bronze Pack
+Series: Series 1</textarea>
+        <a class="purchase-btn" href="#"><span class="purchase-text">Purchase</span></a>
+    </div>
+    <div class="pack silver-pack">
+        <img src="{% static 'img/shop-bg-silver.png' %}" alt="...">
+
+        <img src="{% static 'img/silver-mini-pack.png' %}" alt="..." class="pack-img mini-pack">
+        <img src="{% static 'img/silver-mega-pack.png' %}" alt="..." class="pack-img mega-pack">
+        <textarea class="pack-description" disabled>Pack: Silver Pack
+Series: Series 1</textarea>
+        <a class="purchase-btn" href="#"><span class="purchase-text">Purchase</span></a>
+    </div>
+    <div class="pack gold-pack">
+        <img src="{% static 'img/shop-bg-gold.png' %}" alt="...">
+
+        <img src="{% static 'img/gold-mini-pack.png' %}" alt="..." class="pack-img mini-pack">
+        <img src="{% static 'img/gold-mega-pack.png' %}" alt="..." class="pack-img mega-pack">
+        <textarea class="pack-description" disabled>Pack: Gold Pack
+Series: Series 1</textarea>
+        <a class="purchase-btn" href="#"><span class="purchase-text">Purchase</span></a>
+    </div>
+</div>
+{% endblock %}

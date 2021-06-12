@@ -7,5 +7,6 @@ from RaffleSite import views
 
 urlpatterns = [
     url(r'^favicon\.ico$', RedirectView.as_view(url='/static/img/favicon.png'), name='favicon'),
-    path('', views.index)
+    path('', views.index),
+    path('purchase/', views.purchase)
 ]

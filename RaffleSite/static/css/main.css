@@ -4,12 +4,13 @@ body {
     background: #1d202b;
 }
 
-.head-bg {
+.head-bg, .foot-bg {
     position: absolute;
     width: 100%;
     height: 78px;
     background: #1b1d28;
     z-index: -1;
+    border-bottom: 1px solid #262832;
 }
 
 .wrapper {
@@ -18,9 +19,39 @@ body {
     max-width: 1920px;
 }
 
+footer {
+    background: #1b1d28;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    height: 100px;
+    border-top: 1px solid #262832;
+    margin-left: 650px;
+
+    text-align: center;
+}
+
+.footer-text {
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+    margin-left: 30px;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+.foot-bg {
+    z-index: 0;
+    border: none;
+    border-top: 1px solid #262832;
+    bottom: 0;
+    height: 100px;
+}
+
 .header {
     background: #1b1d28;
     display: flex;
+    border-bottom: 1px solid #262832;
 }
 
 .logo {
@@ -67,7 +98,7 @@ body {
 .login-btn:hover {
     text-decoration: none;
     color: white;
-    background: #404040;
+    background: #1b1d28;
 }
 
 .nav-elem:active {

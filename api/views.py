@@ -5,6 +5,7 @@ from rest_framework.views import APIView
 from django.contrib.auth.models import User
 from django.contrib.auth import login, logout
 from django.contrib.auth.hashers import make_password
+from .models import Pack
 
 
 # Create your views here.
@@ -32,3 +33,10 @@ class LogoutAPI(APIView):
             return Response({'Status': 'OK'})
         else:
             return Response({'Status': 'Error', 'Message': 'User is not authenticated'})
+
+
+class PacksApi(APIView):
+    def get(self, request):
+        packs = Pack.objects.filter(active=True).all()
+        if not packs:
+            return Response({'Packs': {}, 'Message': 'There are no active drops'})
