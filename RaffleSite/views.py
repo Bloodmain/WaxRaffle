@@ -16,7 +16,7 @@ def get_type(img):
         'Qma8VokEZCNHiRK1HJJUCSviTBxzAyC4avLh67VtGTpn5M': 6   # Bronze Mini
     }
 
-    return data[img]
+    return data.get(img, -1)
 
 
 def index(request):

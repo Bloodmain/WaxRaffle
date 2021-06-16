@@ -33,7 +33,7 @@
                     <img src="{% static 'img/bronze-mini-pack.png' %}" alt="." class="inventory-pack-img mini-pack">
                 {% endif %}
             {% endif %}
-            <a class="open-btn" href="#"><span class="open-text">Open #{{pack.mint}}</span></a>
+            <button class="open-btn"><span class="open-text">Open #{{pack.mint}}</span></button>
         </div>
     {% endfor %}
     {% else %}
