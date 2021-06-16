@@ -1,0 +1,43 @@
+{% extends "main.html" %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/inventory.css' %}">
+<div class="inventory">
+    {% if not user.is_authenticated %}
+        <span class="empty-inventory">You are not logged in. Please <a href="#" class="login-link">log in</a> first </span>
+    {% elif packs %}
+    {% for pack in packs %}
+        <div class="inventory-pack">
+            {% if pack.tp == 0 %}
+                <img src="{% static 'img/inventory-test.png' %}" alt="." class="inventory-pack-bg">
+                <img src="{% static 'img/test-pack.png' %}" alt="." class="inventory-pack-img mega-pack">
+            {% elif pack.tp == 1 or pack.tp == 2 %}
+                <img src="{% static 'img/inventory-bronze.png' %}" alt="." class="inventory-pack-bg">
+                {% if pack.tp == 1 %}
+                    <img src="{% static 'img/bronze-mega-pack.png' %}" alt="." class="inventory-pack-img mega-pack">
+                {% elif pack.tp == 2 %}
+                    <img src="{% static 'img/bronze-mini-pack.png' %}" alt="." class="inventory-pack-img mini-pack">
+                {% endif %}
+            {% elif pack.tp == 3 or pack.tp == 4 %}
+                <img src="{% static 'img/inventory-silver.png' %}" alt="." class="inventory-pack-bg">
+                {% if pack.tp == 3 %}
+                    <img src="{% static 'img/silver-mega-pack.png' %}" alt="." class="inventory-pack-img mega-pack">
+                {% elif pack.tp == 4 %}
+                    <img src="{% static 'img/silver-mini-pack.png' %}" alt="." class="inventory-pack-img mini-pack">
+                {% endif %}
+            {% elif pack.tp == 5 or pack.tp == 6 %}
+                <img src="{% static 'img/inventory-gold.png' %}" alt="." class="inventory-pack-bg">
+                {% if pack.tp == 5 %}
+                    <img src="{% static 'img/gold-mega-pack.png' %}" alt="." class="inventory-pack-img mega-pack">
+                {% elif pack.tp == 6 %}
+                    <img src="{% static 'img/gold-mini-pack.png' %}" alt="." class="inventory-pack-img mini-pack">
+                {% endif %}
+            {% endif %}
+            <a class="open-btn" href="#"><span class="open-text">Open #{{pack.mint}}</span></a>
+        </div>
+    {% endfor %}
+    {% else %}
+    <span class="empty-inventory">Your inventory is empty. Visit <a href="/purchase/" class="shop-link">our shop</a> first </span>
+    {% endif %}
+</div>
+{% endblock %}

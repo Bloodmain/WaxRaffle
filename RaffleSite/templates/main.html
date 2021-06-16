@@ -20,19 +20,19 @@
     <div class="header">
         <img src="{% static 'img/favicon.png'%}" alt="Logo" class="logo">
         {% if selected == 1%}
-            <a class="nav-elem selected" href="/purchase/">Purchase</a>
+        <a class="nav-elem selected" href="/purchase/">Purchase</a>
         {% else %}
-            <a class="nav-elem" href="/purchase/">Purchase</a>
+        <a class="nav-elem" href="/purchase/">Purchase</a>
         {% endif %}
         {% if selected == 2%}
-            <a class="nav-elem selected" href="#">Try Your Luck</a>
+        <a class="nav-elem selected" href="/inventory/">Try Your Luck</a>
         {% else %}
-            <a class="nav-elem" href="#">Try Your Luck</a>
+        <a class="nav-elem" href="/inventory/">Try Your Luck</a>
         {% endif %}
         {% if selected == 3%}
-            <a class="nav-elem selected" href="#">Swap</a>
+        <a class="nav-elem selected" href="#">Swap</a>
         {% else %}
-            <a class="nav-elem" href="#">Swap</a>
+        <a class="nav-elem" href="#">Swap</a>
         {% endif %}
         {% if not user.is_authenticated %}
         <a class="login-btn" href="#">Login</a>
@@ -53,13 +53,17 @@
         {% endif %}
     </div>
     <div class="content">
-         {% block content %}
-            <h1 class="footer-text">Main page, click on purchase button</h1>
-         {% endblock %}
+        {% block content %}
+        <h1 class="footer-text">Main page, click on any button</h1>
+        {% endblock %}
     </div>
     <footer>
-        <h1 class="footer-text">We're not in Twitter 'cause Wewery is completely lazy</h1>
-        <h1 class="footer-text">All rights reserved © 2021 Bloodmain</h1>
+        <div class="footer-content">
+        <span class="footer-text first-line"><img src="{% static 'img/twitter.png' %}" alt="..."
+                                                  class="footer-img tw" href="#">WaxRaffle
+            <img src="{% static 'img/telegram.png' %}" alt="..." class="footer-img tg" href="#"></span><br>
+            <span class="footer-text second-line">All rights reserved © 2021 WaxRaffle</span>
+        </div>
     </footer>
 </div>
 <div class="foot-bg"></div>

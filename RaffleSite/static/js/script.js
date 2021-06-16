@@ -31,7 +31,7 @@ $.ajaxSetup({
 
 autoLogin()
 
-$('.login-btn').click(function () {
+$('.login-btn, .login-link').click(function () {
     login()
 })
 

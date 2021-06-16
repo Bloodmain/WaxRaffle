@@ -1,0 +1,80 @@
+.content {
+    text-align: center;
+}
+
+.inventory {
+    background: #151b31;
+    width: 90%;
+    height: 700px;
+    margin-left: 5%;
+    margin-top: 40px;
+    border-radius: 60px;
+    border: 1px solid #3d3f48;
+    overflow-y: auto;
+}
+
+.inventory::-webkit-scrollbar {
+    border-radius: 20px;
+    background: transparent;
+}
+
+.inventory::-webkit-scrollbar-thumb {
+    background: #c8247f;
+    border-radius: 20px;
+}
+
+.inventory::-webkit-scrollbar-track {
+    margin-top: 42px;
+    margin-bottom: 42px;
+}
+
+.inventory-pack {
+    display: inline-block;
+}
+
+.inventory-pack-img {
+    position: relative;
+    margin-left: -245px;
+    margin-right: 60px;
+    margin-top: -35px;
+    width: 170px;
+    height: 170px;
+}
+
+.open-text {
+    opacity: 0.8;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.open-btn {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 15px;
+    background: #9a0b63;
+    color: white;
+    border: 1px solid white;
+    border-radius: 15px;
+    position: relative;
+    margin-left: -200px;
+    margin-right: 100px;
+    top: 80px;
+}
+
+.open-btn:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.empty-inventory, .shop-link, .login-link {
+    font-family: 'Work Sans', sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+.shop-link, .login-link {
+    text-decoration: underline;
+}
+
+.shop-link:hover, .login-link:hover {
+    color: #c8247f;
+}

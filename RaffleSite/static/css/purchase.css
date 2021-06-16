@@ -122,17 +122,17 @@ h1 {
 }
 
 .test-pack>.purchase-btn {
-    background: #E50280;
+    background: #c8247f;
 }
 
 .bronze-pack>.purchase-btn {
-    background: #97622d;
+    background: #8f6f50;
 }
 
 .silver-pack>.purchase-btn {
-    background: silver;
+    background: #8a8a8a;
 }
 
 .gold-pack>.purchase-btn {
-    background: gold;
+    background: #9b8928;
 }
